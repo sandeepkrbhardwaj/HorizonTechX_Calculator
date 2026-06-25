@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CALC — Horizon TechX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <main class="wrapper">
+    <header class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">CALC<em>X</em></span>
+      <span class="brand-tag">Horizon TechX</span>
+    </header>
+
+    <!-- Display -->
+    <div class="display-shell">
+      <div class="display-top">
+        <span id="expression" class="expression"></span>
+        <button class="history-btn" id="histToggle" title="History">⟳</button>
+      </div>
+      <div id="result" class="result">0</div>
+      <div class="display-meta">
+        <span id="mem-indicator" class="mem-indicator hidden">M</span>
+        <span id="mode-label" class="mode-label">BASIC</span>
+      </div>
+    </div>
+
+    <!-- History panel -->
+    <div class="history-panel hidden" id="historyPanel">
+      <div class="history-header">History <button id="clearHist">Clear</button></div>
+      <ul id="historyList"></ul>
+    </div>
+
+    <!-- Mode toggle -->
+    <div class="mode-row">
+      <button class="mode-tab active" data-mode="basic">Basic</button>
+      <button class="mode-tab" data-mode="scientific">Scientific</button>
+    </div>
+
+    <!-- Scientific extras (hidden by default) -->
+    <div class="sci-row hidden" id="sciRow">
+      <button class="btn btn-fn" data-action="sin">sin</button>
+      <button class="btn btn-fn" data-action="cos">cos</button>
+      <button class="btn btn-fn" data-action="tan">tan</button>
+      <button class="btn btn-fn" data-action="log">log</button>
+      <button class="btn btn-fn" data-action="ln">ln</button>
+      <button class="btn btn-fn" data-action="sqrt">√</button>
+      <button class="btn btn-fn" data-action="square">x²</button>
+      <button class="btn btn-fn" data-action="cube">x³</button>
+      <button class="btn btn-fn" data-action="pi">π</button>
+      <button class="btn btn-fn" data-action="e">e</button>
+    </div>
+
+    <!-- Memory row -->
+    <div class="mem-row">
+      <button class="btn btn-mem" data-action="MC">MC</button>
+      <button class="btn btn-mem" data-action="MR">MR</button>
+      <button class="btn btn-mem" data-action="M+">M+</button>
+      <button class="btn btn-mem" data-action="M-">M−</button>
+      <button class="btn btn-mem" data-action="MS">MS</button>
+    </div>
+
+    <!-- Main keypad -->
+    <div class="keypad">
+      <!-- Row 1 -->
+      <button class="btn btn-util" data-action="AC">AC</button>
+      <button class="btn btn-util" data-action="sign">±</button>
+      <button class="btn btn-util" data-action="percent">%</button>
+      <button class="btn btn-op" data-action="/">÷</button>
+
+      <!-- Row 2 -->
+      <button class="btn btn-num" data-action="7">7</button>
+      <button class="btn btn-num" data-action="8">8</button>
+      <button class="btn btn-num" data-action="9">9</button>
+      <button class="btn btn-op" data-action="*">×</button>
+
+      <!-- Row 3 -->
+      <button class="btn btn-num" data-action="4">4</button>
+      <button class="btn btn-num" data-action="5">5</button>
+      <button class="btn btn-num" data-action="6">6</button>
+      <button class="btn btn-op" data-action="-">−</button>
+
+      <!-- Row 4 -->
+      <button class="btn btn-num" data-action="1">1</button>
+      <button class="btn btn-num" data-action="2">2</button>
+      <button class="btn btn-num" data-action="3">3</button>
+      <button class="btn btn-op" data-action="+">+</button>
+
+      <!-- Row 5 -->
+      <button class="btn btn-num btn-zero" data-action="0">0</button>
+      <button class="btn btn-num" data-action=".">.</button>
+      <button class="btn btn-eq" data-action="=">=</button>
+    </div>
+
+    <footer class="footer">Keyboard supported · Built by Sandeep Kumar Bhardwaj</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
